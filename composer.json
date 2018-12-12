@@ -1,0 +1,16 @@
+{
+	"name": "atiksoftware/php-framework-amiral",
+	"authors": [{
+		"name": "Atiksoftware Corporation",
+		"email": "atiksoftware@gmail.com"
+	}],
+	"require": {
+		"atiksoftware/php-class-db-mongodb": "^1.2",
+		"atiksoftware/php-class-schema-merger": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Atiksoftware\\Amiral\\": "src"
+		}
+	}
+}
