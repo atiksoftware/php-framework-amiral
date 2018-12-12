@@ -17,7 +17,11 @@
 				array_shift($paths);
 			}
 			else {
-				$paths = explode( "/", isset($_SERVER["PATH_INFO"]) ? $_SERVER["PATH_INFO"] : "" );
+				$pi = isset($_SERVER["ORIG_PATH_INFO"]) ? $_SERVER["ORIG_PATH_INFO"] : "";
+				if($pi == ""){
+					$pi = isset($_SERVER["PATH_INFO"]) ? $_SERVER["PATH_INFO"] : "";
+				} 
+				$paths = explode( "/", $pi ); 
 			} 
 			$_roads = array_filter($paths, function($v) {
 				return trim($v) != '' && $v != "..";

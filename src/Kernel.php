@@ -6,10 +6,10 @@
 	{
 
 		static function Run(){ 
+			Security::AllowOrigin();
 			self::loadControllers();
 			self::loadEngine();
 			
-			Security::AllowOrigin();
 		}
 
 		static function loadControllers(){
